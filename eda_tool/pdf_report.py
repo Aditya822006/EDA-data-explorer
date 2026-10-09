@@ -50,7 +50,7 @@ def _generate_fallback_pdf(dataframe: pd.DataFrame, health_score: Any, rule_resu
     with PdfPages(buffer) as report:
         # Page 1: Executive Overview & Data Health
         figure = plt.figure(figsize=(8.27, 11.69), facecolor="#FFFFFF")
-        figure.text(0.08, 0.94, "Data Exploration & Health Report", fontsize=20, fontweight="bold", color="#0F172A")
+        figure.text(0.08, 0.94, "Datalens - An Intelligent Exploratory Data Analysis Platform", fontsize=16, fontweight="bold", color="#0F172A")
         figure.text(0.08, 0.915, f"Total Records: {len(dataframe):,}   |   Fields: {len(dataframe.columns):,}   |   Memory Footprint: {dataframe.memory_usage(deep=True).sum() / 1024**2:.2f} MB", fontsize=9.5, color="#334155")
         
         # Health Box
@@ -78,7 +78,7 @@ def _generate_fallback_pdf(dataframe: pd.DataFrame, health_score: Any, rule_resu
         checks_text = "\n".join(rule_lines) if rule_lines else "No specific quality checks were enabled."
         figure.text(0.08, 0.46, checks_text, fontsize=8.5, va="top", color="#0F172A")
 
-        figure.text(0.08, 0.04, "Page 1 of 3  |  Data Explorer Executive Report", fontsize=8, color="#94A3B8")
+        figure.text(0.08, 0.04, "Page 1 of 3  |  Datalens Executive Report", fontsize=8, color="#94A3B8")
         report.savefig(figure, bbox_inches="tight"); plt.close(figure)
 
         # Page 2: Field Profiling & Key Numerical Statistics
@@ -113,7 +113,7 @@ def _generate_fallback_pdf(dataframe: pd.DataFrame, health_score: Any, rule_resu
                 figure.text(0.08, y_pos, line, fontsize=8, family="monospace", color="#0F172A")
                 y_pos -= 0.019
 
-        figure.text(0.08, 0.04, "Page 2 of 3  |  Data Explorer Executive Report", fontsize=8, color="#94A3B8")
+        figure.text(0.08, 0.04, "Page 2 of 3  |  Datalens Executive Report", fontsize=8, color="#94A3B8")
         report.savefig(figure, bbox_inches="tight"); plt.close(figure)
 
         # Page 3: Visual Relationships & Unusual Values
@@ -135,7 +135,7 @@ def _generate_fallback_pdf(dataframe: pd.DataFrame, health_score: Any, rule_resu
             else:
                 axes[1].axis("off")
             figure.tight_layout()
-            figure.text(0.08, 0.02, "Page 3 of 3  |  Data Explorer Executive Report", fontsize=8, color="#94A3B8")
+            figure.text(0.08, 0.02, "Page 3 of 3  |  Datalens Executive Report", fontsize=8, color="#94A3B8")
             report.savefig(figure); plt.close(figure)
 
     return buffer.getvalue()
@@ -253,7 +253,7 @@ tr:nth-child(even) { background: #F8FAFC; }
 </head>
 <body>
 <div class="header">
-  <h1>Data Executive Summary Report</h1>
+  <h1>Datalens - An Intelligent Exploratory Data Analysis Platform</h1>
   <p class="subtitle">Comprehensive dataset exploration, data health analysis, and statistical summary</p>
 </div>
 

@@ -48,7 +48,7 @@ from eda_tool.visualizations import (
 )
 
 
-st.set_page_config(page_title="Data Explorer", page_icon=":material/insights:", layout="wide")
+st.set_page_config(page_title="Datalens - An Intelligent Exploratory Data Analysis Platform", page_icon=":material/insights:", layout="wide")
 
 
 def apply_application_style() -> None:
@@ -160,7 +160,7 @@ def render_landing_header() -> None:
     st.markdown(
         """
         <section class="landing-hero">
-            <div class="brand">DATA EXPLORER</div>
+            <div class="brand">DATALENS</div>
             <h1>Turn your data into clear business insights.</h1>
             <p>Upload your file to evaluate data quality, analyze statistical patterns, and generate executive PDF reports.</p>
         </section>
@@ -483,7 +483,7 @@ def render_correlation_tab(dataframe: pd.DataFrame) -> None:
 def main() -> None:
     apply_application_style()
     with st.sidebar:
-        st.markdown("## Data Explorer")
+        st.markdown("## Datalens")
         st.markdown("### Quick start")
         st.write("Upload a CSV, Excel, or JSON file. Data is processed in memory only.")
         st.markdown("### Report navigation")

@@ -1,12 +1,12 @@
-# Data Explorer
+# Datalens - An Intelligent Exploratory Data Analysis Platform
 
-Data Explorer is a Streamlit application for turning an uploaded dataset into a clear exploratory data analysis (EDA) report. It accepts CSV, Excel, and JSON files, checks data quality, explains distributions and relationships, finds unusual values, recommends suitable charts, and exports a stakeholder-ready PDF report.
+Datalens is a Streamlit application for turning an uploaded dataset into a clear exploratory data analysis (EDA) report. It accepts CSV, Excel, and JSON files, checks data quality, explains distributions and relationships, finds unusual values, recommends suitable charts, and exports a stakeholder-ready PDF report.
 
 It is designed for analysts and non-technical users who need a useful first assessment of a dataset without writing code.
 
 ## What the project does
 
-Upload a tabular dataset and Data Explorer will:
+Upload a tabular dataset and Datalens will:
 
 - Read CSV, Excel (`.xlsx`, `.xls`), and JSON files, including common nested JSON layouts and JSON files with trailing commas.
 - Infer practical number, date/time, and category data types.
